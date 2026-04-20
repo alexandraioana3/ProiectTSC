@@ -6,35 +6,7 @@ DINU ALEXANDRA - IOANA 332CC
 
 1. DIAGRAMA BLOC
 
-USB-C (J5)
-   │
-   ├── VBUS 5V
-   ▼
-BQ25180 Charger
-   │
-   ├── VBAT ───────► Li-Po Battery
-   │                  │
-   │                  └──► MAX17048 Fuel Gauge
-   │
-   └── SYS (3.7V - 4.2V)
-          │
-          ▼
-     RT6160 Buck-Boost
-          │
-          └── VCC 3.3V
-                │
-                ▼
-         nRF52840 MCU
-            │   │   │   │
-            │   │   │   ├── GPIO ─► Buttons / LED
-            │   │   │
-            │   │   ├── PWM/I2C ─► DRV2605L (Haptic)
-            │   │
-            │   ├── I2C ─► BMA421 (Accelerometer)
-            │   ├── I2C ─► MAX17048
-            │
-            └── SPI ─► E-Paper Display
-
+se afla in Diagrama-bloc.png
 
 --------------------------------------------------
 2. BILL OF MATERIALS (BOM)
