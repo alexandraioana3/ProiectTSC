@@ -1,0 +1,7 @@
+Componenta	Producator/Model	Cod JLC Parts	Link Datasheet
+MCU	Nordic nRF52840	C227306	https://infocenter.nordicsemi.com/pdf/nRF52840_PS_v1.7.pdf
+Charger	TI BQ25180	C5162464	https://www.ti.com/lit/ds/symlink/bq25180.pdf
+Fuel Gauge	Maxim MAX17048	C224357	https://datasheets.maximintegrated.com/en/ds/MAX17048-MAX17049.pdf
+Accelerometer	Bosch BMA421	C281864	https://www.mouser.com/datasheet/2/783/bst-bma421-ds000-1509549.pdf
+Haptic Driver	TI DRV2605L	C137152	https://www.ti.com/lit/ds/symlink/drv2605l.pdf
+Regulator	Richtek RT6160	C2892336	https://www.richtek.com/assets/product_pdf/RT6160A/DS6160A-02.pdf
