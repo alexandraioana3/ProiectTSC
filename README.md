@@ -78,17 +78,85 @@ Datasheet       : https://www.richtek.com/assets/product_pdf/RT6160A/DS6160A-02.
 4. ALOCARE PINI nRF52840
 --------------------------------------------------
 
-P0.31  → USB D+        → USB-C (J5)
-P0.30  → USB D-        → USB-C (J5)
 
-P0.26  → I2C SDA       → Senzori
-P0.27  → I2C SCL       → Senzori
 
-P0.02  → SPI SCK       → Display
-P0.03  → SPI MOSI      → Display
+USB D+ / D-  | USB Data     | USB-C (J5)
+             |              | Pini dedicati pentru comunicatia USB nativa
 
-P0.12  → PWM/TRIG      → DRV2605L
-P0.11  → INT           → BQ25180
+
+P0.06        | I2C SDA      | Senzori / PMIC
+             |              | Magistrala date (BMA421, MAX17048, BQ25180)
+
+P0.07        | I2C SCL      | Senzori / PMIC
+             |              | Magistrala clock pentru comunicatia I2C
+
+
+P0.02        | SPI SCK      | E-Paper Display
+             |              | Semnal de ceas pentru magistrala SPI
+
+P0.03        | SPI MOSI     | E-Paper Display
+             |              | Transmisie date imagine catre ecran
+
+P0.05        | SPI CS       | E-Paper Display
+             |              | Chip Select - activeaza comunicarea cu ecranul
+
+P0.15        | EPD DC       | E-Paper Display
+             |              | Data/Command control pentru driverul de ecran
+
+P0.16        | EPD RST      | E-Paper Display
+             |              | Reset hardware pentru panoul E-Paper
+
+P0.17        | EPD BUSY     | E-Paper Display
+             |              | Feedback de la ecran (procesare imagine)
+
+
+P0.12        | HAPTIC EN    | DRV2605L
+             |              | Activare / Trigger pentru driverul haptic
+
+P0.11        | PMIC INT     | BQ25180
+             |              | Intrerupere de la charger
+
+P0.10        | ALERT        | MAX17048
+             |              | Alerta baterie (ex: nivel critic)
+
+
+P0.08        | IMU INT1     | BMA421
+             |              | Intrerupere accelerometru (tap/tilt)
+
+P1.08        | IMU INT2     | BMA421
+             |              | Intrerupere secundara (low power)
+
+
+P1.06        | BUTTON       | SW_UP
+             |              | Buton navigare sus
+
+P1.04        | BUTTON       | SW_DN
+             |              | Buton navigare jos
+
+
+P0.18        | RESET        | Debug Port
+             |              | Reset hardware extern
+
+
+SWDIO        | Debug Data   | TC2030 (J2)
+             |              | Linie date programare
+
+SWDCLK       | Debug Clock  | TC2030 (J2)
+             |              | Linie ceas programare
+
+
+P0.00 / 0.01 | XL1 / XL2    | Cristal 32kHz
+             |              | Oscilator low power / RTC
+
+XC1 / XC2    | HF Crystal   | Cristal 32MHz
+             |              | Frecventa principala + BLE
+
+
+VBUS         | Power Sense  | USB VBUS
+             |              | Detectie 5V USB
+
+VDDH         | High Voltage | 3.3V VCC
+             |              | Alimentare principala
 
 
 --------------------------------------------------
